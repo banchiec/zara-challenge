@@ -1,62 +1,55 @@
-# 📱 Phone Catalog App
+# React + TypeScript + Vite
 
-Aplicación web para la visualización, búsqueda y gestión de un catálogo de teléfonos móviles. Desarrollada como parte de una prueba técnica.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🚀 Tecnologías utilizadas
+Currently, two official plugins are available:
 
-- [React](https://react.dev/)
-- [Vite](https://vitejs.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [React Context API](https://react.dev/learn/scaling-up-with-reducer-and-context)
-- [SASS](https://sass-lang.com/)
-- [Vitest](https://vitest.dev/) para testing
-- [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)
-- [GitHub Actions](https://docs.github.com/en/actions)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 📦 Instalación
+## Expanding the ESLint configuration
 
-```bash
-git clone https://github.com/tu-usuario/phone-catalog.git
-cd phone-catalog
-npm install
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
-## 🛠 Configuración del Proyecto
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-Este proyecto cuenta con una configuración inicial sólida pensada para mantener la calidad del código y facilitar la colaboración en equipo.
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-### ✅ ESLint
-
-Se ha configurado ESLint con soporte para:
-
-- **TypeScript** mediante `@typescript-eslint`.
-- **React** con las reglas recomendadas de `eslint-plugin-react` y `eslint-plugin-react-hooks`.
-- **Fast Refresh** para advertencias sobre exportaciones con `eslint-plugin-react-refresh`.
-- Ignora la carpeta `dist`.
-
-El archivo de configuración se encuentra en `eslint.config.ts`.
-
-### ✅ Prettier
-
-Prettier se encarga del formateo automático del código. Está integrado con ESLint para detectar conflictos de estilo automáticamente.
-
-- Configuración personalizada en `.prettierrc`.
-- Script `npm run format` para aplicar Prettier al código.
-
-### ✅ Husky + lint-staged
-
-Se ha configurado Husky para ejecutar comprobaciones antes de cada commit:
-
-- Ejecuta `npm run lint` y `npm run format` solo sobre los archivos staged usando `lint-staged`.
-- Evita commits que introduzcan errores o formato incorrecto.
-
-> Esto ayuda a mantener una base de código limpia sin esfuerzo adicional.
-
----
-
-Puedes ejecutar manualmente los scripts con:
-
-```bash
-npm run lint     # Ejecuta ESLint sobre el proyecto
-npm run format   # Ejecuta Prettier para formatear el código
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+})
 ```
+# zara-challenge
