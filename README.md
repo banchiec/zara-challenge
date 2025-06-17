@@ -19,3 +19,4 @@ Aplicación web para la visualización, búsqueda y gestión de un catálogo de 
 git clone https://github.com/tu-usuario/phone-catalog.git
 cd phone-catalog
 npm install
+```
