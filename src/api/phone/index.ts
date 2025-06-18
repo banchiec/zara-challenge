@@ -1,2 +1,4 @@
+import { getByIdPhone } from './get-by-id-phone';
 import { getListPhones } from './get-list-phones';
-export default getListPhones;
+
+export { getListPhones, getByIdPhone };
