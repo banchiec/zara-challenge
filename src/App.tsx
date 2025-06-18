@@ -1,9 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
+import { useListPhones } from './hooks';
 
 function App() {
   const [count, setCount] = useState(0);
+  const { phones, loading, error } = useListPhones();
+  console.log(phones);
 
+  useEffect(() => {
+    if (error) {
+      console.error('Error fetching phones:', error);
+    }
+  }, [error]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
   return (
     <>
       <h1>Vite + React</h1>
