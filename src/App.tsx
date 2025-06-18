@@ -1,21 +1,6 @@
-import { useEffect } from 'react';
-import { useListPhones } from './hooks';
 import './App.css';
 
 function App() {
-  const { phones, loading, error } = useListPhones();
-  console.log(phones);
-
-  useEffect(() => {
-    if (error) {
-      console.error('Error fetching phones:', error);
-    }
-  }, [error]);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <>
       <div className="card">
