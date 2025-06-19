@@ -1,32 +1,17 @@
-import { useEffect } from 'react';
-import { useListPhones } from './hooks';
+import { BrowserRouter } from 'react-router-dom';
+import { Suspense } from 'react';
+import routes from './config/routes';
+import { useRoutes } from 'react-router-dom';
 
-function App() {
-  const { phones, loading, error } = useListPhones();
-  console.log(phones);
-
-  useEffect(() => {
-    if (error) {
-      console.error('Error fetching phones:', error);
-    }
-  }, [error]);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
+export const AppRouter = () => useRoutes(routes);
+const App = () => {
   return (
-    <>
-      <div className="card">
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <BrowserRouter>
+      <Suspense fallback={<div>Loading...</div>}>
+        <AppRouter />
+      </Suspense>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
