@@ -1,4 +1,3 @@
-// src/components/layout/Layout.tsx
 import { type JSX } from 'react';
 import { Outlet } from 'react-router-dom';
 

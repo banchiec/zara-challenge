@@ -6,4 +6,5 @@ const ListPhotosView = () => {
     </div>
   );
 };
+
 export default ListPhotosView;
