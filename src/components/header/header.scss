@@ -1,0 +1,23 @@
+.zara-challenge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem 1.6rem;
+  background-color: #ffffff;
+  &__logo {
+    text-decoration: none;
+  }
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+    list-style: none;
+    letter-spacing: -0.28rem;
+  }
+  &__bag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1rem;
+  }
+}
