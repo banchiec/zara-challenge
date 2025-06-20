@@ -1,6 +1,10 @@
-import { BagIcon } from '../../../assets/icons';
+import { BagIcon } from '../../../../assets/icons';
+import type { BagTypes } from './types';
 
-const Bag = () => {
+const Bag = (props: BagTypes) => {
+  const { items } = props;
+  console.log(items);
+
   const bagItems = localStorage.getItem('bagItems');
   const itemsBag = bagItems ? JSON.parse(bagItems).length : 0;
   return (

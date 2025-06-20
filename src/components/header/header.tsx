@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Logo } from '../components/logo';
+import { Bag, Logo } from './components';
 import './header.scss';
-import Bag from '../components/bag/bag';
 
 const Header = () => {
   return (
@@ -10,7 +9,7 @@ const Header = () => {
         <Logo />
       </Link>
       <div className="zara-challenge-header__bag">
-        <Bag />
+        <Bag items={0} />
       </div>
     </nav>
   );
