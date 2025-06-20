@@ -1,5 +1,5 @@
-import { EclipseIcon, StartIcon } from '../../../assets/icons';
-import { APP_NAME } from '../../../constants';
+import { EclipseIcon, StartIcon } from '../../../../assets/icons';
+import { APP_NAME } from '../../../../constants';
 
 const Logo = () => {
   return (
