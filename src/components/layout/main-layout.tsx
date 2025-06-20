@@ -1,10 +1,11 @@
 import { type JSX } from 'react';
 import { Outlet } from 'react-router-dom';
+import Header from '../header';
 
 const MainLayout = (): JSX.Element => {
   return (
     <div>
-      <h1>Header</h1>
+      <Header />
       <div>
         <main>
           <Outlet />
