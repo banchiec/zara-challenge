@@ -16,8 +16,24 @@
   }
   &__bag {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 0.1rem;
+    &-items {
+      font-size: 1.6rem;
+      font-weight: 300;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .zara-challenge-header {
+    padding: 2.4rem 4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .zara-challenge-header {
+    padding: 2.4rem 10rem;
   }
 }

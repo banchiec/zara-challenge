@@ -1,5 +1,5 @@
 import { API_KEY } from '../../constants';
-import type { PhoneTypes } from '../../types/phone';
+import type { PhoneTypes } from '../../types/phone-types';
 
 const BASE_URL = 'https://prueba-tecnica-api-tienda-moviles.onrender.com';
 
