@@ -1,4 +1,5 @@
 import type { GalleryPhonesTypes } from './types';
+import { Link } from 'react-router-dom';
 import { CardPhone } from '../card-phone';
 import './gallery-phones.scss';
 
@@ -7,7 +8,9 @@ const GalleryPhones = (props: GalleryPhonesTypes) => {
   return (
     <section className="zara-challenge-gallery-phones">
       {phones.map((phone, index) => (
-        <CardPhone key={index} phone={phone} />
+        <Link key={index} to={`/phone/${phone.id}`}>
+          <CardPhone phone={phone} />
+        </Link>
       ))}
     </section>
   );
