@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import type { PhoneTypes } from '../../types/phone';
+import type { PhoneTypes } from '../../types/phone-types';
 import { getByIdPhone } from '../../api';
 
 const useDetailPhone = (phoneId: string) => {

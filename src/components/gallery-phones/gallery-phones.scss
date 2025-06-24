@@ -1,0 +1,45 @@
+.zara-challenge-gallery-phones {
+  display: grid;
+  grid-template-columns: 1fr;
+  .zara-challenge-card-phone {
+    border-top: none;
+    &:first-child {
+      border-top: 1px solid #000000;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .zara-challenge-gallery-phones {
+    grid-template-columns: repeat(2, 1fr);
+    .zara-challenge-card-phone {
+      &:nth-child(odd) {
+        border-right: none;
+      }
+    }
+    .zara-challenge-card-phone:nth-child(-n + 2) {
+      border-top: 1px solid #000000;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .zara-challenge-gallery-phones {
+    grid-template-columns: repeat(5, 1fr);
+    .zara-challenge-card-phone {
+      &:nth-child(5n) {
+        border-right: 1px solid #000000;
+      }
+      &:nth-child(even) {
+        border-right: none;
+      }
+      &:last-child {
+        border-right: 1px solid #000000;
+      }
+      &:nth-child(-n + 5) {
+        border-top: 1px solid #000000;
+      }
+      &:nth-child(5n):nth-child(even) {
+        border-right: 1px solid #000000;
+      }
+    }
+  }
+}

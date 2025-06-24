@@ -1,7 +1,7 @@
-import React from 'react';
-import type { IconTypes } from '../../../types';
+import type { FC } from 'react';
+import type { IconTypes } from '../../../types/index-types';
 
-const BagWhiteIcon: React.FC<IconTypes> = (props: IconTypes) => {
+const BagWhiteIcon: FC<IconTypes> = (props: IconTypes) => {
   const { width = 24, height = 24, color = 'black', className } = props;
   return (
     <svg

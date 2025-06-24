@@ -1,7 +1,7 @@
 export interface PhoneTypes {
-  id: number;
+  id: string;
   brand: string;
-  name: number;
+  name: string;
   basePrice: number;
   imageUrl: string;
 }

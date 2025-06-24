@@ -1,0 +1,12 @@
+.zara-challenge-list-photos-view {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 1.6rem;
+}
+@media (min-width: 1024px) {
+  .zara-challenge-list-photos-view {
+    padding: 0rem 10rem 2rem 10rem;
+  }
+}

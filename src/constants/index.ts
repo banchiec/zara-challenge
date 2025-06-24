@@ -5,3 +5,8 @@ export const ROUTES = {
   HOME: '/',
   PRODUCTS: '/products',
 };
+
+export const CURRENCIES = {
+  USD: 'USD',
+  EUR: 'EUR',
+};
