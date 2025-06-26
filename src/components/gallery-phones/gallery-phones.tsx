@@ -6,7 +6,6 @@ import './gallery-phones.scss';
 
 const GalleryPhones = (props: GalleryPhonesTypes) => {
   const { phones } = props;
-  console.log('object');
   return (
     <section className="zara-challenge-gallery-phones">
       {phones.map((phone: PhoneTypes, index: number) => (
