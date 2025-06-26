@@ -1,5 +1,5 @@
 const DetailPhotoPage = () => {
-  return <div>Photopage</div>;
+  return <div className="zara-challenge-detail-photo-page"></div>;
 };
 
 export default DetailPhotoPage;
