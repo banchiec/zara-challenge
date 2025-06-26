@@ -5,7 +5,7 @@ import SearchPhones from './components/search-phones/search-phones';
 import './list-photos-view.scss';
 
 const ListPhotosView = () => {
-  const { phones } = usePhones();
+  const { filteredPhones } = usePhones();
 
   return (
     <div className="zara-challenge-list-photos-view">
@@ -14,7 +14,7 @@ const ListPhotosView = () => {
         placeHolder={INPUT_SEARCH.placeHolder}
         className="zara-challenge-list-photos-view__input-search"
       />
-      <GalleryPhones phones={phones} />
+      <GalleryPhones phones={filteredPhones} />
     </div>
   );
 };

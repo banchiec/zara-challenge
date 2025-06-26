@@ -1,6 +1,7 @@
 .zara-challenge-gallery-phones {
   display: grid;
   grid-template-columns: 1fr;
+  width: 100%;
   .zara-challenge-card-phone {
     border-top: none;
     &:first-child {
