@@ -1,21 +1,19 @@
-import { GalleryPhones } from '../../components';
-import { useListPhones } from '../../hooks';
+import { INPUT_SEARCH } from '../../constants';
+import { usePhones } from '../../context/AppContext/app-context';
+import { GalleryPhones } from './components';
+import SearchPhones from './components/search-phones/search-phones';
 import './list-photos-view.scss';
 
 const ListPhotosView = () => {
-  const { phones, loading, error } = useListPhones();
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
-  if (!phones || phones.length === 0) {
-    return <div>No phones available.</div>;
-  }
+  const { phones } = usePhones();
 
   return (
     <div className="zara-challenge-list-photos-view">
+      <SearchPhones
+        name={INPUT_SEARCH.name}
+        placeHolder={INPUT_SEARCH.placeHolder}
+        className="zara-challenge-list-photos-view__input-search"
+      />
       <GalleryPhones phones={phones} />
     </div>
   );

@@ -10,3 +10,19 @@ export const CURRENCIES = {
   USD: 'USD',
   EUR: 'EUR',
 };
+
+export const INPUT_SEARCH = {
+  name: 'input-search-phone',
+  placeHolder: 'Search to a smartphone...',
+};
+
+export const DEFAULT_VALUES = {
+  string: '',
+  number: 0,
+  object: {},
+  array: [],
+};
+
+export const INPUT_TYPES = {
+  text: 'text',
+};
