@@ -1,5 +1,5 @@
 import type { CardPhoneTypes } from '../../components/card-phone/types';
-import type { GalleryPhonesTypes } from '../../components/gallery-phones/types';
+import type { GalleryPhonesTypes } from '../../views/list-photos-view/components/gallery-phones/types';
 
 export const MOCK_PHONE: CardPhoneTypes['phone'] = {
   id: 'galaxy-s22',
