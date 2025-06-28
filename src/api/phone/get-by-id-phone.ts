@@ -1,9 +1,11 @@
 import { API_KEY } from '../../constants';
-import type { PhoneTypes } from '../../types/phone-types';
+import type { PhoneDetailTypes } from '../../views/detail-photo-view/components/card-form-detail-phone/types';
 
 const BASE_URL = 'https://prueba-tecnica-api-tienda-moviles.onrender.com';
 
-export const getByIdPhone = async (phoneId: string): Promise<PhoneTypes> => {
+export const getByIdPhone = async (
+  phoneId: string
+): Promise<PhoneDetailTypes> => {
   try {
     const response = await fetch(`${BASE_URL}/products/${phoneId}`, {
       headers: { 'x-api-key': API_KEY },

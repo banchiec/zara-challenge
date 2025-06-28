@@ -1,0 +1,128 @@
+.zara-challenge-card-detail-phone {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 100%;
+  &__image {
+    width: 26rem;
+    height: 27em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem;
+    gap: 4rem;
+    &-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      &-title {
+        font-size: 2rem;
+        font-weight: 300;
+        font-family: 'Inter', sans-serif;
+      }
+      span {
+        font-size: 1.4rem;
+        font-weight: 300;
+        font-family: 'Inter', sans-serif;
+      }
+    }
+    &-details {
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+      &-coverage {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        span {
+          font-size: 1.2rem;
+          font-weight: 300;
+          font-family: 'Inter', sans-serif;
+        }
+        &-button {
+          display: flex;
+          flex-direction: row;
+          button {
+            width: 8.9rem;
+            border: 1px solid #cccc;
+            height: 4.8rem;
+            background-color: #ffff;
+            border-right: 0;
+            &:last-child {
+              border-right: 1px solid #cccc;
+            }
+          }
+        }
+      }
+      &-colorOptions {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        &.selected {
+          border: 2px solid #0000;
+        }
+        span {
+          font-size: 1.2rem;
+          font-weight: 300;
+          font-family: 'Inter', sans-serif;
+        }
+        &-buttons {
+          display: flex;
+          flex-direction: row;
+          gap: 1.6rem;
+          button {
+            width: 2.4rem;
+            height: 2.4rem;
+            border: 1px solid #cccc;
+            padding: 1rem;
+
+            &.selected {
+              border: 5px solid #0000;
+            }
+          }
+        }
+      }
+    }
+    &__button {
+      width: 100%;
+      padding: 2rem 3.2rem;
+      border: none;
+      font-size: 1.2rem;
+      line-height: 8%;
+      font-weight: 300;
+      text-align: center;
+      color: #c2bfbc;
+      &:not(:disabled) {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+}
+.zara-challenge-card-detail-phone__info-details-coverage-button button.selected,
+.zara-challenge-card-detail-phone__info-details-colorOptions-buttons
+  button.selected {
+  border: 1px solid black;
+}
+@media (min-width: 768px) {
+  .zara-challenge-card-detail-phone {
+    justify-content: space-around;
+    flex-direction: row;
+    &__image {
+      width: 33.6rem;
+      height: 41.4rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+}
