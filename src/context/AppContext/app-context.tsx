@@ -5,7 +5,6 @@ import {
   useMemo,
   type ReactNode,
 } from 'react';
-//import { useListPhones } from '../../hooks';
 import type { PhoneTypes } from '../../types/phone-types';
 import { useListPhones } from '../../hooks';
 

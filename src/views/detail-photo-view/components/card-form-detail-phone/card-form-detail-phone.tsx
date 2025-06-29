@@ -8,12 +8,16 @@ import type {
 import { phoneDetailSchema } from './schema';
 import { CURRENCIES } from '../../../../constants';
 import { DETAIL_PHONE } from '../../constants';
+import { useNavigate } from 'react-router-dom';
 import './card-form-detail-phone.scss';
+import { useCart } from '../../../../context/cartContext/cart-context';
 
 const CardFormDetailPhone = (props: CardFormDetailPhoneTypes) => {
   const { phone } = props;
   const [touchedColor, setTouchedColor] = useState(false);
   const [touchedStorage, setTouchedStorage] = useState(false);
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
 
   const [selectedColor, setSelectedColor] = useState(phone.colorOptions[0]);
 
@@ -29,7 +33,6 @@ const CardFormDetailPhone = (props: CardFormDetailPhoneTypes) => {
     },
   });
 
-  console.log(phone);
   const watchedStorage = watch('storage');
   const watchedColor = watch('color');
   const hasChanged =
@@ -40,6 +43,20 @@ const CardFormDetailPhone = (props: CardFormDetailPhoneTypes) => {
 
   const onSubmit = (data: PhoneDetailFormValuesTypes) => {
     console.log('new-phone:', data);
+
+    const imageColorSelected =
+      phone.colorOptions.find((color) => color.name === data.color)?.imageUrl ??
+      phone.colorOptions[0].imageUrl;
+    const phoneCart = {
+      id: phone.id,
+      name: phone.name,
+      imageUrl: imageColorSelected,
+      color: data.color,
+      storage: data.storage.capacity, // Pass the full storage object
+      price: data.storage.price,
+    };
+    addToCart(phoneCart);
+    navigate('/cart');
   };
 
   return (
