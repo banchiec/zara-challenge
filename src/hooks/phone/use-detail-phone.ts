@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getByIdPhone } from '../../api';
-import type { PhoneDetailTypes } from '../../views/detail-photo-view/components/card-form-detail-phone/types';
+import type { PhoneDetailTypes } from '../../views/detail-phone-view/components/card-form-detail-phone/types';
 
 const useDetailPhone = (phoneId: string) => {
   const [phone, setPhone] = useState<PhoneDetailTypes>();

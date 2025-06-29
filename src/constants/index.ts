@@ -4,6 +4,7 @@ export const APP_NAME = 'MBST';
 export const ROUTES = {
   HOME: '/',
   PRODUCTS: '/products',
+  CART: '/cart',
 };
 
 export const CURRENCIES = {
@@ -15,7 +16,6 @@ export const INPUT_SEARCH = {
   name: 'input-search-phone',
   placeHolder: 'Search to a smartphone...',
 };
-
 export const DEFAULT_VALUES = {
   string: '',
   number: 0,

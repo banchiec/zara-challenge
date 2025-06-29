@@ -1,4 +1,4 @@
-export * from './list-photos-page';
+export * from './list-phones-page';
 export * from './not-found-page';
-export * from './detail-photo-page';
-export * from './cart-photo-page';
+export * from './detail-phone-page';
+export * from './cart-phone-page';

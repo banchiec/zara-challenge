@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import SpecsList from '../../../../views/detail-photo-view/components/specification-phone';
+import SpecsList from '../../../../views/detail-phone-view/components/specification-phone';
 import renderWithProviders from '../../../utils';
 
 const mockSpecs = {
