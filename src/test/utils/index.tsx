@@ -3,12 +3,15 @@ import { render, type RenderOptions } from '@testing-library/react';
 
 import type { ReactElement, ReactNode } from 'react';
 import { PhonesProvider } from '../../context/AppContext/app-context';
+import { CartProvider } from '../../context/cartContext/cart-context';
 
 const renderWithProviders = (ui: ReactElement, options?: RenderOptions) => {
   const Providers = ({ children }: { children: ReactNode }) => {
     return (
       <Router>
-        <PhonesProvider>{children}</PhonesProvider>
+        <PhonesProvider>
+          <CartProvider>{children}</CartProvider>
+        </PhonesProvider>
       </Router>
     );
   };

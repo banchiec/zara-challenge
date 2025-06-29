@@ -7,13 +7,13 @@ import { CartProvider } from './context/cartContext/cart-context';
 export const AppRouter = () => useRoutes(routes);
 const App = () => {
   return (
-    <CartProvider>
-      <BrowserRouter>
-        <PhonesProvider>
+    <BrowserRouter>
+      <PhonesProvider>
+        <CartProvider>
           <AppRouter />
-        </PhonesProvider>
-      </BrowserRouter>
-    </CartProvider>
+        </CartProvider>
+      </PhonesProvider>
+    </BrowserRouter>
   );
 };
 
