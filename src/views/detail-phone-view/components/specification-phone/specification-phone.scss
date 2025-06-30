@@ -1,0 +1,35 @@
+.zara-challenge-detail-phone-specs {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem;
+  &-title {
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+  }
+  &-list {
+    &__item {
+      display: flex;
+      padding: 1.6rem 0rem;
+      justify-content: space-between;
+      border-top: 1px solid #000;
+      gap: 1.2rem;
+      list-style: none;
+      dt {
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: 300;
+        font-family: 'Inter', sans-serif;
+      }
+      dd {
+        width: 100%;
+        font-weight: 300;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2rem;
+      }
+      &:last-child {
+        border-bottom: 1px solid #000;
+      }
+    }
+  }
+}

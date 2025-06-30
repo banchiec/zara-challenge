@@ -1,4 +1,4 @@
-import type { PhoneTypes } from '../../types/phone';
+import type { PhoneTypes } from '../../types/phone-types';
 
 const BASE_URL = 'https://prueba-tecnica-api-tienda-moviles.onrender.com';
 const API_KEY = import.meta.env.VITE_API_KEY;

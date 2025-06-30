@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import type { PhoneTypes } from '../../types/phone';
 import { getByIdPhone } from '../../api';
+import type { PhoneDetailTypes } from '../../views/detail-phone-view/components/card-form-detail-phone/types';
 
 const useDetailPhone = (phoneId: string) => {
-  const [phone, setPhone] = useState<PhoneTypes | null>(null);
+  const [phone, setPhone] = useState<PhoneDetailTypes>();
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string>();
 
   const getPhoneDetails = async (phoneId: string) => {
     try {

@@ -1,0 +1,39 @@
+.zara-carousel-section {
+  padding: 2rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  .zara-carousel-title {
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    color: #000;
+  }
+}
+
+.zara-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .zara-carousel-card-wrapper {
+    flex: 0 0 auto;
+    width: 280px; // Aquí defines el ancho que quieres SOLO en el carrusel
+    scroll-snap-align: start;
+
+    &:not(:last-child) {
+      border-right: 1px solid #e0e0e0;
+    }
+
+    &:last-child {
+      margin-right: 1.6rem;
+    }
+  }
+}

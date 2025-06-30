@@ -1,7 +1,7 @@
-import React from 'react';
-import type { IconTypes } from '../../../types';
+import type { FC } from 'react';
+import type { IconTypes } from '../../../types/index-types';
 
-const StartIcon: React.FC<IconTypes> = (props: IconTypes) => {
+const StartIcon: FC<IconTypes> = (props: IconTypes) => {
   const { width = 16, height = 15, color = 'black', className } = props;
 
   return (

@@ -1,8 +1,20 @@
+import { INPUT_SEARCH } from '../../constants';
+import { usePhones } from '../../context/AppContext/app-context';
+import { GalleryPhones } from './components';
+import SearchPhones from './components/search-phones/search-phones';
+import './list-photos-view.scss';
+
 const ListPhotosView = () => {
+  const { filteredPhones } = usePhones();
+
   return (
-    <div className="list-photos-view">
-      <h1>List Photos View</h1>
-      <p>This is where the list of photos will be displayed.</p>
+    <div className="zara-challenge-list-photos-view">
+      <SearchPhones
+        name={INPUT_SEARCH.name}
+        placeHolder={INPUT_SEARCH.placeHolder}
+        className="zara-challenge-list-photos-view__input-search"
+      />
+      <GalleryPhones phones={filteredPhones} />
     </div>
   );
 };

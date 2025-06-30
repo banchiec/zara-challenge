@@ -1,0 +1,10 @@
+.zara-challenge-cart-phone-view {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem;
+}
+@media (min-width: 768px) {
+  .zara-challenge-cart-phone-view {
+    padding: 4rem;
+  }
+}

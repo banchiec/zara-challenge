@@ -1,7 +1,7 @@
-import React from 'react';
-import type { IconTypes } from '../../../types';
+import type { FC } from 'react';
+import type { IconTypes } from '../../../types/index-types';
 
-const EclipseIcon: React.FC<IconTypes> = ({
+const EclipseIcon: FC<IconTypes> = ({
   width = 13,
   height = 15,
   color = 'black',
