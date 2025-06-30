@@ -1,5 +1,3 @@
-// context/CartContext.tsx
-
 import {
   createContext,
   useCallback,
@@ -17,6 +15,8 @@ interface CartContextType {
   // eslint-disable-next-line no-unused-vars
   addToCart: (item: CartItemTypes) => void;
   clearCart: () => void;
+  // eslint-disable-next-line no-unused-vars
+  deleteItemCart: (itemId: string) => void;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -45,14 +45,18 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     setCart((prev) => [...prev, item]);
   }, []);
 
+  const deleteItemCart = useCallback((itemId: string) => {
+    setCart((prev) => prev.filter((item) => item.id !== itemId));
+  }, []);
+
   const clearCart = useCallback(() => {
     setCart([]);
     clearCartStorage();
   }, []);
 
   const value = useMemo(
-    () => ({ cart, addToCart, clearCart }),
-    [cart, addToCart, clearCart]
+    () => ({ cart, addToCart, clearCart, deleteItemCart }),
+    [cart, addToCart, clearCart, deleteItemCart]
   );
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

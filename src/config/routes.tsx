@@ -1,10 +1,10 @@
 import { lazy } from 'react';
 import MainLayout from '../components/layout';
 import { ROUTES } from '../constants';
-import CartPhotoPage from '../pages/cart-photo-page';
+import CartPhotoPage from '../pages/cart-phone-page';
 
-const ListPhotosPage = lazy(() => import('../pages/list-photos-page'));
-const DetailPhotoPage = lazy(() => import('../pages/detail-photo-page'));
+const ListPhotosPage = lazy(() => import('../pages/list-phones-page'));
+const DetailPhotoPage = lazy(() => import('../pages/detail-phone-page'));
 const NotFoundPage = lazy(() => import('../pages/not-found-page'));
 
 const routes = [
@@ -14,7 +14,7 @@ const routes = [
     children: [
       { index: true, element: <ListPhotosPage /> },
       { path: '/phone/:id', element: <DetailPhotoPage /> },
-      { path: '/cart', element: <CartPhotoPage /> },
+      { path: `${ROUTES.CART}`, element: <CartPhotoPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],
   },

@@ -8,7 +8,8 @@ export const loadCart = (): CartItemTypes[] => {
     if (!data) return [];
     const parsed = JSON.parse(data);
     return Array.isArray(parsed) ? parsed : [];
-  } catch {
+  } catch (err) {
+    console.warn('Invalid cart data in localStorage', err);
     return [];
   }
 };

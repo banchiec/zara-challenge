@@ -1,5 +1,5 @@
 import { API_KEY } from '../../constants';
-import type { PhoneDetailTypes } from '../../views/detail-photo-view/components/card-form-detail-phone/types';
+import type { PhoneDetailTypes } from '../../views/detail-phone-view/components/card-form-detail-phone/types';
 
 const BASE_URL = 'https://prueba-tecnica-api-tienda-moviles.onrender.com';
 

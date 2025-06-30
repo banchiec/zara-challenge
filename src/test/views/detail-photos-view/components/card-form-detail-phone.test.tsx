@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { screen, fireEvent } from '@testing-library/react';
 import renderWithProviders from '../../../utils';
-import CardFormDetailPhone from '../../../../views/detail-photo-view/components/card-form-detail-phone';
+import CardFormDetailPhone from '../../../../views/detail-phone-view/components/card-form-detail-phone';
 import { MOCK_PHONE_DETAIL } from '../../../mocks';
 
 describe('CardFormDetailPhone', () => {
