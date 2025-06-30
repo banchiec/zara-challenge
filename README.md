@@ -16,7 +16,7 @@ Aplicación web para la visualización, búsqueda y gestión de un catálogo de 
 ## 📦 Instalación
 
 ```bash
-git clone https://github.com/tu-usuario/phone-catalog.git
+git clone https://github.com/banchiec/zara-challenge.git
 cd phone-catalog
 npm install
 ```
