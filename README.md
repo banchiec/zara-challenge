@@ -21,15 +21,15 @@ Proyecto frontend construido con **React 18**, **Vite**, **TypeScript**, y herra
 
 | Script         | Descripción                                           |
 |----------------|-------------------------------------------------------|
-| `dev`          | Inicia el servidor de desarrollo con Vite            |
-| `build`        | Compila TypeScript y genera el build optimizado      |
-| `preview`      | Previsualiza el build localmente                     |
-| `lint`         | Ejecuta ESLint en todos los archivos `.ts` y `.tsx`  |
-| `lint:fix`     | Corrige automáticamente los errores de lint          |
-| `format`       | Formatea todo el proyecto con Prettier               |
-| `format:check` | Verifica el formateo sin modificar archivos          |
-| `test`         | Corre todos los tests con Vitest                     |
-| `test:ui`      | Abre la interfaz gráfica de Vitest                   |
+| dev            | Inicia el servidor de desarrollo con Vite            |
+| build          | Compila TypeScript y genera el build optimizado      |
+| preview        | Previsualiza el build localmente                     |
+| lint           | Ejecuta ESLint en todos los archivos .ts y .tsx      |
+| lint:fix       | Corrige automáticamente los errores de lint          |
+| format         | Formatea todo el proyecto con Prettier               |
+| format:check   | Verifica el formateo sin modificar archivos          |
+| test           | Corre todos los tests con Vitest                     |
+| test:ui        | Abre la interfaz gráfica de Vitest                   |
 
 ---
 
@@ -88,10 +88,22 @@ npm run test:ui
 # 1. Instalar dependencias
 npm install
 
-# 2. Iniciar servidor de desarrollo
+# 2. Crear archivo .env en la raíz del proyecto
+touch .env
+```
+
+Agrega las siguientes variables dentro de `.env`:
+
+```env
+VITE_API_KEY=87909682e6cd74208f41a6ef39fe4191
+API_BASE_URL=https://prueba-tecnica-api-tienda-moviles.onrender.com
+```
+
+```bash
+# 3. Iniciar servidor de desarrollo
 npm run dev
 
-# 3. Ejecutar tests
+# 4. Ejecutar tests
 npm test
 ```
 
@@ -132,6 +144,3 @@ npm run test:ui
 ## 📄 Licencia
 
 Este proyecto es privado.
-
----
-
